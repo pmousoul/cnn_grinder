@@ -1,0 +1,29 @@
+SqueezeNet v1.1
+Dynamic Fixed Point - DFP version
+N x K x K x M (matlab) parameter organization
+Check intermediate results
+against Ristretto (dynamic fixed point)
+using 8-bit input and parameters accuracy: 
+
+MAX error in conv1:     0.000000
+MAX error in maxpool1:  0.000000
+MAX error in Fire2:     0.000000
+MAX error in Fire3:     0.000000
+MAX error in maxpool3:  0.000000
+MAX error in Fire4:     0.000000
+MAX error in Fire5:     0.000000
+MAX error in maxpool5:  0.000000
+MAX error in Fire6:     0.000000
+MAX error in Fire7:     0.000000
+MAX error in Fire8:     0.000000
+MAX error in Fire9:     0.000000
+MAX error in conv10:    0.000000
+MAX error in avgpool10: 0.000001
+MAX error in softmax:   0.000000
+
+Top-5 results =
+0.911529 espresso
+0.031430 soup bowl
+0.012546 tray
+0.005836 cup
+0.005718 potpie

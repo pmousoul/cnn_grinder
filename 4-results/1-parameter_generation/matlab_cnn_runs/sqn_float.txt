@@ -1,0 +1,30 @@
+SqueezeNet v1.1
+Floating-point - FLP version
+N x K x K x M (matlab) parameter organization
+Check intermediate results
+against Caffe (floating point)
+using floating-point input
+and parameter accuracy: 
+
+Max error in conv1:     0.000153
+Max error in maxpool1:  0.000153
+Max error in Fire2:     0.000366
+Max error in Fire3:     0.000761
+Max error in maxpool3:  0.000748
+Max error in Fire4:     0.000839
+Max error in Fire5:     0.000916
+Max error in maxpool5:  0.000916
+Max error in Fire6:     0.000732
+Max error in Fire7:     0.000534
+Max error in Fire8:     0.000282
+Max error in Fire9:     0.000282
+Max error in conv10:    0.000105
+Max error in avgpool10: 0.000010
+Max error in softmax:   0.000000
+
+Top-5 results =
+0.943871 espresso
+0.022815 soup bowl
+0.009449 tray
+0.005011 potpie
+0.002301 cup

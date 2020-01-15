@@ -1,0 +1,27 @@
+ZynqNet
+Caffe version
+K x K x N x M (matlab) parameter organization
+Check intermediate results
+against Caffe (floating point)
+using floating-point input
+and parameter accuracy: 
+
+Max error in conv1:     0.000153
+Max error in Fire2:     0.001587
+Max error in Fire3:     0.007027
+Max error in Fire4:     0.004883
+Max error in Fire5:     0.008301
+Max error in Fire6:     0.010742
+Max error in Fire7:     0.002686
+Max error in Fire8:     0.001343
+Max error in Fire9:     0.000229
+Max error in conv10:    0.000061
+Max error in avgpool10: 0.000004
+Max error in softmax:   0.000000
+
+Top-5 results =
+0.998780 espresso
+0.000259 soup bowl
+0.000251 coffee mug
+0.000192 cup
+0.000147 chocolate sauce, chocolate syrup

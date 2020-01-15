@@ -1,0 +1,121 @@
+ZynqNet fixed-point SW implementation - Top-5 results:
+-------------------------------------------------------
+	Class number:	Probability:	Class name:
+	-------------	------------	-----------
+	968		0.9982057	espresso
+	961		0.0003565	chocolate sauce, chocolate syrup
+	505		0.0003455	coffee mug
+	810		0.0003455	soup bowl
+	969		0.0002231	cup
+
+layer RSHP	 latency (sec): 0.0044315
+layer C1	 latency (sec): 0.8254392
+layer F2S3	 latency (sec): 0.3104164
+layer F2E1	 latency (sec): 0.1840550
+layer F2E3	 latency (sec): 0.4539203
+layer M2	 latency (sec): 0.0014959
+layer F3S1	 latency (sec): 0.0902061
+layer F3E1	 latency (sec): 0.1817113
+layer F3E3	 latency (sec): 0.4524772
+layer M3	 latency (sec): 0.0015311
+layer F4S3	 latency (sec): 0.2858965
+layer F4E1	 latency (sec): 0.1024852
+layer F4E3	 latency (sec): 0.3836983
+layer M4	 latency (sec): 0.0006966
+layer F5S1	 latency (sec): 0.0705397
+layer F5E1	 latency (sec): 0.1026072
+layer F5E3	 latency (sec): 0.3696223
+layer M5	 latency (sec): 0.0006396
+layer F6S3	 latency (sec): 0.2912812
+layer F6E1	 latency (sec): 0.0644099
+layer F6E3	 latency (sec): 0.3354196
+layer M6	 latency (sec): 0.0003111
+layer F7S1	 latency (sec): 0.0634350
+layer F7E1	 latency (sec): 0.0478989
+layer F7E3	 latency (sec): 0.2494963
+layer M7	 latency (sec): 0.0002218
+layer F8S3_1	 latency (sec): 0.1046082
+layer F8S3_2	 latency (sec): 0.0773591
+layer M8S	 latency (sec): 0.0000173
+layer F8E1	 latency (sec): 0.0210580
+layer F8E3	 latency (sec): 0.1208922
+layer M8	 latency (sec): 0.0000810
+layer F9S1	 latency (sec): 0.0308374
+layer F9E1	 latency (sec): 0.0315198
+layer F9E3_1	 latency (sec): 0.1225636
+layer F9E3_2	 latency (sec): 0.0525430
+layer M9E	 latency (sec): 0.0000544
+layer M9	 latency (sec): 0.0001114
+layer C10_11	 latency (sec): 0.1012591
+layer C10_12	 latency (sec): 0.1004208
+layer M10_1	 latency (sec): 0.0000761
+layer C10_21	 latency (sec): 0.1009710
+layer C10_22	 latency (sec): 0.1011978
+layer M10_2	 latency (sec): 0.0000759
+layer M10	 latency (sec): 0.0001575
+layer AVGP	 latency (sec): 0.0008236
+layer SMAX	 latency (sec): 0.0003770
+TOTAL latency (sec): 5.8413474
+
+ZynqNet fixed-point HW implementation - Top-5 results:
+-------------------------------------------------------
+	Class number:	Probability:	Class name:
+	-------------	------------	-----------
+	968		0.9982057	espresso
+	961		0.0003565	chocolate sauce, chocolate syrup
+	505		0.0003455	coffee mug
+	810		0.0003455	soup bowl
+	969		0.0002231	cup
+
+layer RSHP	 latency (sec): 0.0037655
+layer C1	 latency (sec): 0.0164833
+layer F2S3	 latency (sec): 0.0041667
+layer F2E1	 latency (sec): 0.0039742
+layer F2E3	 latency (sec): 0.0053161
+layer M2	 latency (sec): 0.0019280
+layer F3S1	 latency (sec): 0.0023197
+layer F3E1	 latency (sec): 0.0039769
+layer F3E3	 latency (sec): 0.0053165
+layer M3	 latency (sec): 0.0017677
+layer F4S3	 latency (sec): 0.0025573
+layer F4E1	 latency (sec): 0.0017602
+layer F4E3	 latency (sec): 0.0031272
+layer M4	 latency (sec): 0.0007026
+layer F5S1	 latency (sec): 0.0010311
+layer F5E1	 latency (sec): 0.0017626
+layer F5E3	 latency (sec): 0.0031261
+layer M5	 latency (sec): 0.0006702
+layer F6S3	 latency (sec): 0.0021274
+layer F6E1	 latency (sec): 0.0009137
+layer F6E3	 latency (sec): 0.0024011
+layer M6	 latency (sec): 0.0002883
+layer F7S1	 latency (sec): 0.0006590
+layer F7E1	 latency (sec): 0.0007123
+layer F7E3	 latency (sec): 0.0018308
+layer M7	 latency (sec): 0.0002183
+layer F8S3_1	 latency (sec): 0.0010091
+layer F8S3_2	 latency (sec): 0.0007774
+layer M8S	 latency (sec): 0.0000194
+layer F8E1	 latency (sec): 0.0003103
+layer F8E3	 latency (sec): 0.0011820
+layer M8	 latency (sec): 0.0000689
+layer F9S1	 latency (sec): 0.0003470
+layer F9E1	 latency (sec): 0.0004267
+layer F9E3_1	 latency (sec): 0.0011820
+layer F9E3_2	 latency (sec): 0.0005480
+layer M9E	 latency (sec): 0.0000488
+layer M9	 latency (sec): 0.0000999
+layer C10_11	 latency (sec): 0.0009325
+layer C10_12	 latency (sec): 0.0009184
+layer M10_1	 latency (sec): 0.0000966
+layer C10_21	 latency (sec): 0.0009241
+layer C10_22	 latency (sec): 0.0009211
+layer M10_2	 latency (sec): 0.0000686
+layer M10	 latency (sec): 0.0001419
+layer AVGP	 latency (sec): 0.0008356
+layer SMAX	 latency (sec): 0.0002767
+TOTAL latency (sec): 0.0840379
+
+
+Consistency check between Caffe/Ristretto and C/C++ results passed.
+Max absolute error is less than: 0.0000001

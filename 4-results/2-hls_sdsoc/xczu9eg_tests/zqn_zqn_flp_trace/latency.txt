@@ -1,0 +1,78 @@
+CPU: Network Setup:
+=====================
+
+c1    : 256x256 x   3 > 64 , CONV (3x3)/2p + ReLU, IN @mem(       0-  786432B), OUT @mem(  786432B), WEIGHTS @mem(       0-    7168B)
+f2/s3 : 128x128 x  64 > 16 , CONV (3x3)/2p + ReLU, IN @mem(  786432- 4980736B), OUT @mem( 4980736B), WEIGHTS @mem(    7168-   44096B)
+f2/e1 :  64x64  x  16 > 64 , CONV (1x1)/1  + ReLU, IN @mem( 4980736- 5242880B), OUT @mem( 5242880B), WEIGHTS @mem(   44096-   48448B) (split1)
+f2/e3 :  64x64  x  16 > 64 , CONV (3x3)/1p + ReLU, IN @mem( 4980736- 5242880B), OUT @mem( 5243136B), WEIGHTS @mem(   48448-   85568B) (split2)
+f3/s1 :  64x64  x 128 > 16 , CONV (1x1)/1  + ReLU, IN @mem( 5242880- 7340032B), OUT @mem( 7340032B), WEIGHTS @mem(   85568-   93824B)
+f3/e1 :  64x64  x  16 > 64 , CONV (1x1)/1  + ReLU, IN @mem( 7340032- 7602176B), OUT @mem( 7602176B), WEIGHTS @mem(   93824-   98176B) (split1)
+f3/e3 :  64x64  x  16 > 64 , CONV (3x3)/1p + ReLU, IN @mem( 7340032- 7602176B), OUT @mem( 7602432B), WEIGHTS @mem(   98176-  135296B) (split2)
+f4/s3 :  64x64  x 128 > 32 , CONV (3x3)/2p + ReLU, IN @mem( 7602176- 9699328B), OUT @mem( 9699328B), WEIGHTS @mem(  135296-  282880B)
+f4/e1 :  32x32  x  32 > 128, CONV (1x1)/1  + ReLU, IN @mem( 9699328- 9830400B), OUT @mem( 9830400B), WEIGHTS @mem(  282880-  299776B) (split1)
+f4/e3 :  32x32  x  32 > 128, CONV (3x3)/1p + ReLU, IN @mem( 9699328- 9830400B), OUT @mem( 9830912B), WEIGHTS @mem(  299776-  447744B) (split2)
+f5/s1 :  32x32  x 256 > 32 , CONV (1x1)/1  + ReLU, IN @mem( 9830400-10878976B), OUT @mem(10878976B), WEIGHTS @mem(  447744-  480640B)
+f5/e1 :  32x32  x  32 > 128, CONV (1x1)/1  + ReLU, IN @mem(10878976-11010048B), OUT @mem(11010048B), WEIGHTS @mem(  480640-  497536B) (split1)
+f5/e3 :  32x32  x  32 > 128, CONV (3x3)/1p + ReLU, IN @mem(10878976-11010048B), OUT @mem(11010560B), WEIGHTS @mem(  497536-  645504B) (split2)
+f6/s3 :  32x32  x 256 > 64 , CONV (3x3)/2p + ReLU, IN @mem(11010048-12058624B), OUT @mem(12058624B), WEIGHTS @mem(  645504- 1235584B)
+f6/e1 :  16x16  x  64 > 256, CONV (1x1)/1  + ReLU, IN @mem(12058624-12124160B), OUT @mem(12124160B), WEIGHTS @mem( 1235584- 1302144B) (split1)
+f6/e3 :  16x16  x  64 > 256, CONV (3x3)/1p + ReLU, IN @mem(12058624-12124160B), OUT @mem(12125184B), WEIGHTS @mem( 1302144- 1892992B) (split2)
+f7/s1 :  16x16  x 512 > 64 , CONV (1x1)/1  + ReLU, IN @mem(12124160-12648448B), OUT @mem(12648448B), WEIGHTS @mem( 1892992- 2024320B)
+f7/e1 :  16x16  x  64 > 192, CONV (1x1)/1  + ReLU, IN @mem(12648448-12713984B), OUT @mem(12713984B), WEIGHTS @mem( 2024320- 2074240B) (split1)
+f7/e3 :  16x16  x  64 > 192, CONV (3x3)/1p + ReLU, IN @mem(12648448-12713984B), OUT @mem(12714752B), WEIGHTS @mem( 2074240- 2517376B) (split2)
+f8/s3 :  16x16  x 384 > 112, CONV (3x3)/2p + ReLU, IN @mem(12713984-13107200B), OUT @mem(13107200B), WEIGHTS @mem( 2517376- 4066112B)
+f8/e1 :   8x8   x 112 > 256, CONV (1x1)/1  + ReLU, IN @mem(13107200-13135872B), OUT @mem(13135872B), WEIGHTS @mem( 4066112- 4181824B) (split1)
+f8/e3 :   8x8   x 112 > 256, CONV (3x3)/1p + ReLU, IN @mem(13107200-13135872B), OUT @mem(13136896B), WEIGHTS @mem( 4181824- 5215040B) (split2)
+f9/s1 :   8x8   x 512 > 112, CONV (1x1)/1  + ReLU, IN @mem(13135872-13266944B), OUT @mem(13266944B), WEIGHTS @mem( 5215040- 5444864B)
+f9/e1 :   8x8   x 112 > 368, CONV (1x1)/1  + ReLU, IN @mem(13266944-13295616B), OUT @mem(13295616B), WEIGHTS @mem( 5444864- 5611200B) (split1)
+f9/e3 :   8x8   x 112 > 368, CONV (3x3)/1p + ReLU, IN @mem(13266944-13295616B), OUT @mem(13297088B), WEIGHTS @mem( 5611200- 7096448B) (split2)
+c10/p1:   8x8   x 736 > 512, CONV (1x1)/1        , IN @mem(13295616-13484032B), OUT @mem(13484032B), WEIGHTS @mem( 7096448- 8605824B) (split1) GLOBAL POOL
+c10/p2:   8x8   x 736 > 512, CONV (1x1)/1        , IN @mem(13295616-13484032B), OUT @mem(13486080B), WEIGHTS @mem( 8605824-10115200B) (split2) GLOBAL POOL
+
+CPU: FPGA DRAM Memory Allocation:
+     Bytes allocated: 0B (config) + 9878KB (weights) + 13296KB (data)
+     region: 547910103040 – 547933833344
+CPU: Copy Config + Weights to FPGA DRAM:
+     0B (config) + 9878KB (weights)
+CPU: Loading Input from File ./indata.bin, 768 kBytes.
+CPU: Copy Input Data: 768KB (input image)
+TOTAL latency (sec): 3.43081
+Per layer latency (sec): 
+c1    : 0.461443
+f2/s3 : 0.317697
+f2/e1 : 0.153844
+f2/e3 : 0.154722
+f3/s1 : 0.435654
+f3/e1 : 0.153837
+f3/e3 : 0.154722
+f4/s3 : 0.164751
+f4/e1 : 0.0800433
+f4/e3 : 0.0835708
+f5/s1 : 0.222812
+f5/e1 : 0.0800486
+f5/e3 : 0.0835747
+f6/s3 : 0.0991256
+f6/e1 : 0.0444327
+f6/e3 : 0.0585228
+f7/s1 : 0.118625
+f7/e1 : 0.0372289
+f7/e3 : 0.0477972
+f8/s3 : 0.0759186
+f8/e1 : 0.0189561
+f8/e3 : 0.043615
+f9/s1 : 0.0394147
+f9/e1 : 0.0234732
+f9/e3 : 0.0589253
+c10/p1: 0.109027
+c10/p2: 0.109027
+CPU: Copy Results from FPGA DRAM: 4096 Bytes
+
+Result (top-5):
+====================
+    88.38%: class 207 (output  18.94)
+     4.42%: class 852 (output  15.95)
+     4.25%: class 208 (output  15.91)
+     1.65%: class 219 (output  14.97)
+     0.20%: class 929 (output  12.85)
+
+TestBench Result: SUCCESS

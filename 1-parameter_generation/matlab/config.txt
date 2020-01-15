@@ -1,0 +1,16 @@
+# Input image path
+input_file = ./Images/sample_input.jpg
+
+# ILSVRC 2012 dataset mean file path
+# we don't use the mean file
+# we just subtract mean values from each image channel 
+mean_file = ./Images/ilsvrc_2012_mean.mat
+
+# Compare intermediate results with the expected results
+cmp = 1
+
+# Matcaffe path (change it to point to your own path!!!)
+matcaffe_path = /mnt/terabyte/pmousoul_data/sw/caffe-ristretto/matlab/
+
+# Create parameter and image binary files
+bin = 1

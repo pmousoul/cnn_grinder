@@ -1,0 +1,7 @@
+Conv-Mpool accelerator % latency error against the Trace method:
+Mean of the % L_MODEL error is equal to 2.327554 
+Mean of the % L_COSIM error is equal to 2.312841 
+Max of the % L_MODEL error is equal to 6.172354 
+Max of the % L_COSIM error is equal to 7.055550 
+Var of the % L_MODEL error is equal to 2.636548 
+Var of the % L_COSIM error is equal to 3.416187 

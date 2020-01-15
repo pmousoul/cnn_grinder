@@ -1,0 +1,30 @@
+SqueezeNet v1.1
+Fixed Point - FP version
+N x K x K x M (matlab) parameter organization
+Check intermediate results
+against Ristretto (fixed point)
+using 16-bit input
+and 8-bit parameters accuracy: 
+
+Max error in conv1:     0.000000
+Max error in maxpool1:  0.000000
+Max error in Fire2:     0.000000
+Max error in Fire3:     0.000000
+Max error in maxpool3:  0.000000
+Max error in Fire4:     0.000000
+Max error in Fire5:     0.000000
+Max error in maxpool5:  0.000000
+Max error in Fire6:     0.000000
+Max error in Fire7:     0.000000
+Max error in Fire8:     0.000000
+Max error in Fire9:     0.000000
+Max error in conv10:    0.000000
+Max error in avgpool10: 0.000001
+Max error in softmax:   0.000000
+
+Top-5 results =
+0.908595 espresso
+0.019136 tray
+0.016887 soup bowl
+0.012911 potpie
+0.007682 chocolate sauce, chocolate syrup

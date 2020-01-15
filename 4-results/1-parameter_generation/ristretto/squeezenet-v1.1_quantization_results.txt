@@ -1,0 +1,27 @@
+I0731 01:34:29.877972 26690 quantization.cpp:277] Network accuracy analysis for
+I0731 01:34:29.877975 26690 quantization.cpp:278] Convolutional (CONV) and fully
+I0731 01:34:29.877976 26690 quantization.cpp:279] connected (FC) layers.
+I0731 01:34:29.877979 26690 quantization.cpp:280] Baseline 32bit float: 0.58394
+I0731 01:34:29.877984 26690 quantization.cpp:281] Dynamic fixed point CONV
+I0731 01:34:29.877985 26690 quantization.cpp:282] weights: 
+I0731 01:34:29.877987 26690 quantization.cpp:284] 16bit:        0.58094
+I0731 01:34:29.877990 26690 quantization.cpp:284] 8bit:         0.57742
+I0731 01:34:29.877992 26690 quantization.cpp:284] 4bit:         0.00398
+I0731 01:34:29.877995 26690 quantization.cpp:287] Dynamic fixed point FC
+I0731 01:34:29.877996 26690 quantization.cpp:288] weights: 
+I0731 01:34:29.878002 26690 quantization.cpp:290] 16bit:        0.58394
+I0731 01:34:29.878005 26690 quantization.cpp:290] 8bit:         0.58394
+I0731 01:34:29.878007 26690 quantization.cpp:290] 4bit:         0.58394
+I0731 01:34:29.878010 26690 quantization.cpp:290] 2bit:         0.58394
+I0731 01:34:29.878012 26690 quantization.cpp:290] 1bit:         0.58394
+I0731 01:34:29.878018 26690 quantization.cpp:292] Dynamic fixed point layer
+I0731 01:34:29.878022 26690 quantization.cpp:293] activations:
+I0731 01:34:29.878026 26690 quantization.cpp:295] 16bit:        0.58286
+I0731 01:34:29.878031 26690 quantization.cpp:295] 8bit:         0.576139
+I0731 01:34:29.878034 26690 quantization.cpp:295] 4bit:         0.0184002
+I0731 01:34:29.878038 26690 quantization.cpp:298] Dynamic fixed point net:
+I0731 01:34:29.878041 26690 quantization.cpp:299] 8bit CONV weights,
+I0731 01:34:29.878044 26690 quantization.cpp:300] 1bit FC weights,
+I0731 01:34:29.878048 26690 quantization.cpp:301] 8bit layer activations:
+I0731 01:34:29.878051 26690 quantization.cpp:302] Accuracy: 0.56784
+I0731 01:34:29.878056 26690 quantization.cpp:303] Please fine-tune.
