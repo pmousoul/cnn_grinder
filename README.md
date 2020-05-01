@@ -47,8 +47,11 @@ Table 3 shows results related to the comparison between SqueezeJet and SqueezeJe
 
 Figure 7 shows the results of the comparison of our analytical model (L_MODEL) to the C/RTL Co-Simulation function (L_COSIM) of Xilinx Vivado HLS and the Trace function (L_TRACE) of Xilinx SDSoC when the SqueezeJet-2 accelerator is used to execute our implementation of SqueezeNet v1.1. The Trace function (L_TRACE) of Xilinx SDSoC provides the actual performance of the accelerator when it is used to accelerate the SqueezeNet v1.1 CNN on the FPGA SoC board.
 
+***
 ![Comparison between SqueezeJet and SqueezeJet-2 fixed-point accelerators](./4-results/summary/table-3.png)
+***
 ![Comparison between SqueezeJet-2 and ZynqNet floating-point accelerators](./4-results/summary/table-4.png)
+***
 ![Comparison of the analytical model (L_MODEL) to the C/RTL Co-Simulation function (L_COSIM) of Xilinx Vivado HLS and the Trace function (L_TRACE) of Xilinx SDSoC](./4-results/summary/figure-7.png)
 
 ## Contact
