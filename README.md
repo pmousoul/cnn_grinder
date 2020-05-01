@@ -42,6 +42,15 @@ The `2-hls_sdsoc` C/C++ project is the C/C++ implementation of the CNNs describe
 The `3-analytical_model` Matlab project uses HLS performance estimation information (such as loop initiation interval values) in an analytical model to estimate the performance of the SqueezeJet-2 accelerator. This model can be used for the optimization of the SqueezeJet-2 accelerator design. More details can be found in the `3-analytical_model/README.md` file.
 
 
+## Results
+Table 3 shows results related to the comparison between SqueezeJet and SqueezeJet-2 fixed-point accelerators and Table 4 shows results related to the comparison between SqueezeJet-2 and ZynqNet floating-point accelerators.
+
+Figure 7 shows the results of the comparison of our analytical model (L_MODEL) to the C/RTL Co-Simulation function (L_COSIM) of Xilinx Vivado HLS and the Trace function (L_TRACE) of Xilinx SDSoC when the SqueezeJet-2 accelerator is used to execute our implementation of SqueezeNet v1.1. The Trace function (L_TRACE) of Xilinx SDSoC provides the actual performance of the accelerator when it is used to accelerate the SqueezeNet v1.1 CNN on the FPGA SoC board.
+
+![Comparison between SqueezeJet and SqueezeJet-2 fixed-point accelerators](./4-results/summary/table-3.png)
+![Comparison between SqueezeJet-2 and ZynqNet floating-point accelerators](./4-results/summary/table-4.png)
+![Comparison of the analytical model (L_MODEL) to the C/RTL Co-Simulation function (L_COSIM) of Xilinx Vivado HLS and the Trace function (L_TRACE) of Xilinx SDSoC](./4-results/summary/figure-7.png)
+
 ## Contact
 pmousoul@ece.auth.gr
 
@@ -49,16 +58,19 @@ pmousoul@ece.auth.gr
 ## Citing
 If you found our work useful, please cite our paper:
 ```
-Mousouliotis, Panagiotis G., and Loukas P. Petrou. "CNN-Grinder: From Algorithmic to High-Level Synthesis Descriptions of CNNs for Low-end-low-cost FPGA SoCs." Microprocessors and Microsystems (2020): 102990.
+Panagiotis G. Mousouliotis and Loukas P. Petrou, "CNN-Grinder: From Algorithmic to High-Level Synthesis descriptions of CNNs for Low-end-low-cost FPGA SoCs", Microprocessors and Microsystems, Volume 73, March 2020, Article 102990
 ```
 
 ```
 @article{mousouliotis2020cnn,
-  title={CNN-Grinder: From Algorithmic to High-Level Synthesis Descriptions of CNNs for Low-end-low-cost FPGA SoCs},
-  author={Mousouliotis, Panagiotis G and Petrou, Loukas P},
-  journal={Microprocessors and Microsystems},
-  pages={102990},
-  year={2020},
-  publisher={Elsevier}
+  author  = {Panagiotis G. Mousouliotis and Loukas P. Petrou},
+  title   = {{CNN-Grinder: From Algorithmic to High-Level Synthesis Descriptions of CNNs for Low-end-low-cost FPGA SoCs}},
+  journal = {Microprocessors and Microsystems},
+  year    = {2020},
+  volume  = {73},
+  number  = {102990},
+  month   = {March},
+  url     = {https://doi.org/10.1016/j.micpro.2020.102990},
+  doi     = {10.1016/j.micpro.2020.102990},
 }
 ```
